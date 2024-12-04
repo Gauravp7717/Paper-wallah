@@ -1,0 +1,435 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Navbar styles */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.list ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.list ul li {
+    list-style: none;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.list ul li a:hover {
+    color: #ff6347;
+    border-bottom: 2px solid #ff6347;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px; /* Fixed height for yellow section */
+    width: 100vw; /* Full viewport width */
+    background-color: #d1b000; /* Slightly dark yellow */
+    color: white;
+    text-align: center;
+    flex-direction: column; /* Stack text and button vertically */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Heading styles */
+.container h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Space between text and button */
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional content below hero section */
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray for contrast */
+    color: #333; /* Dark text color */
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    background-color: #f4f4dc; /* Light yellowish background */
+    padding: 40px 20px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    background-color: white;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-box h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Dark text */
+    margin-bottom: 15px;
+}
+
+.service-box button {
+    background-color: #ffcc00; /* Yellow button */
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.service-box button:hover {
+    background-color: #ffc107; /* Slightly darker yellow */
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+.service-box:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* Contact Section Styling */
+.contact {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+.contact-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-container textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit Button Styling */
+.contact-container button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #ffc107;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .nav .list ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* About Section Styles */
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    text-align: center;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Creators Container */
+.creators-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+
+/* Creator Box */
+.creator-box {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.creator-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.creator-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.creator-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6347; /* Hover color for social icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .creators-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .creator-box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Define custom colors for PaperWallah theme */
+:root {
+    --main-color: #6b4f3b; /* Earthy brown, symbolizing paper */
+    --secondary-color: #d1b29b; /* Light beige for subtle highlights */
+    --bg-color: #f8f4e1; /* Off-white for background */
+    --second-bg-color: #ffffff; /* White for individual service box */
+}
+
+/* Services Section */
+.services h2 {
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Container for services */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    transition: .5s ease;
+    flex-direction: row;
+}
+
+/* Hover effect on services container */
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.1);
+}
+
+/* Individual service box */
+.services-container .services-box {
+    flex: 0 0 35rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 6rem;
+    text-align: center;
+    border: .5rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+/* Hover effect on each service box */
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+/* Service title (h3) */
+.services-box h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+/* Icon style for services */
+.services-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+/* Service description (p) */
+.services-box p {
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1rem 0 2rem;
+    color: #333333; /* Dark gray for readability */
+}
+
+/* Button style */
+#btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
+/* Footer styles */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Ensures footer stays at the bottom */
+    width: 100%;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
